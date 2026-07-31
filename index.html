@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ach Kdor Ey Te has</title>
+    <meta name="description" content="រូបភាពបែកធ្លាយ Gangster បាក់ឌុប២០២៣ – រូបភាពបែកធ្លាយមនុស្សមួយក្រុមនៅសុខៗស្រាប់តែបែកធ្លាយ។">
+
+    <!-- Open Graph / Facebook / WhatsApp / Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pukah-vercel.app/">
+    <meta property="og:title" content="Ach Kdor Ey Te has">
+    <meta property="og:description" content="រូបភាពបែកធ្លាយ Gangster បាក់ឌុប២០២៣ – រូបភាពបែកធ្លាយមនុស្សមួយក្រុមនៅសុខៗស្រាប់តែបែកធ្លាយ។">
+    <meta property="og:image" content="https://pukah-vercel.app/1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ach Kdor Ey Te has – New Season Collection">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Ach Kdor Ey Te has">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pukah-vercel.app/">
+    <meta name="twitter:title" content="Ach Kdor Ey Te has">
+    <meta name="twitter:description" content="រូបភាពបែកធ្លាយ Gangster បាក់ឌុប២០២៣ – រូបភាពបែកធ្លាយមនុស្សមួយក្រុមនៅសុខៗស្រាប់តែបែកធ្លាយ។">
+    <meta name="twitter:image" content="https://pukah-vercel.app/1.jpg">
+    <meta name="twitter:image:alt" content="Ach Kdor Ey Te has – New Season Collection">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+        :root {
+            --ink: #10212b;
+            --sky: #dff4ff;
+            --mint: #b2f4e3;
+            --coral: #ff7f50;
+            --sun: #ffd166;
+            --paper: #f8fbff;
+            --panel: rgba(255, 255, 255, 0.8);
+            --ring: rgba(16, 33, 43, 0.22);
+            --glow: 0 20px 45px rgba(16, 33, 43, 0.18);
+            --slide-duration: 4000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Space Grotesk", "Segoe UI", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 10% 15%, rgba(255, 209, 102, 0.6), transparent 35%),
+                radial-gradient(circle at 90% 20%, rgba(178, 244, 227, 0.7), transparent 42%),
+                linear-gradient(130deg, #cfefff 0%, #e6fbf6 50%, #fff7ea 100%);
+            padding: 2rem 1.25rem;
+            overflow-x: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            z-index: -1;
+            border-radius: 999px;
+            filter: blur(8px);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        body::before {
+            width: 340px;
+            height: 340px;
+            left: -120px;
+            top: 25vh;
+            background: linear-gradient(140deg, rgba(255, 127, 80, 0.9), rgba(255, 209, 102, 0.7));
+            animation: drift 11s ease-in-out infinite alternate;
+        }
+
+        body::after {
+            width: 260px;
+            height: 260px;
+            right: -80px;
+            bottom: 8vh;
+            background: linear-gradient(120deg, rgba(178, 244, 227, 0.95), rgba(79, 192, 255, 0.75));
+            animation: drift 13s ease-in-out infinite alternate-reverse;
+        }
+
+        /* ── Layout ─────────────────────────────────────────── */
+        .landing {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1.1fr 1fr;
+            align-items: center;
+            background: var(--panel);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 28px;
+            box-shadow: var(--glow);
+            padding: clamp(1.3rem, 2.8vw, 2.4rem);
+            animation: rise 0.8s ease-out both;
+        }
+
+        /* ── Hero copy ──────────────────────────────────────── */
+        .hero-copy {
+            animation: float-up 0.7s ease-out both;
+        }
+
+        .kicker {
+            display: inline-block;
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            letter-spacing: 0.04em;
+            font-weight: 700;
+            color: #0f3b4e;
+            background: linear-gradient(120deg, rgba(255, 209, 102, 0.85), rgba(178, 244, 227, 0.85));
+            margin-bottom: 1rem;
+            font-family: 'Kantumruy Pro';
+        }
+
+        h1 {
+            font-family: 'Kantumruy Pro',"Bebas Neue", "Segoe UI", sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5.1rem);
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+            color: #0c1d26;
+        }
+
+        .lead {
+            font-family: 'Kantumruy Pro';
+            font-size: clamp(1rem, 2.1vw, 1.22rem);
+            line-height: 1.6;
+            max-width: 48ch;
+            margin-bottom: 1.5rem;
+            color: #244452;
+            animation: float-up 0.85s ease-out both;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            animation: float-up 1s ease-out both;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.82rem 1.25rem;
+            border-radius: 999px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            color: #0f2a36;
+            background: linear-gradient(120deg, var(--sun), #ffc48a);
+            box-shadow: 0 8px 18px rgba(255, 174, 66, 0.38);
+        }
+
+        .btn-secondary {
+            color: #12445b;
+            border-color: rgba(18, 68, 91, 0.26);
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 14px 26px rgba(255, 174, 66, 0.45);
+        }
+
+        /* ── Slider ─────────────────────────────────────────── */
+        .slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 22px;
+            box-shadow: 0 16px 30px rgba(17, 51, 63, 0.24);
+            background: var(--paper);
+            animation: float-up 0.9s ease-out both;
+            /* Height controlled by aspect ratio */
+            aspect-ratio: 4 / 3;
+        }
+
+        .slides-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.65s cubic-bezier(0.77, 0, 0.18, 1);
+            will-change: transform;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            user-select: none;
+            -webkit-user-drag: none;
+            pointer-events: none;
+        }
+
+        .slide::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 26, 34, 0.35), rgba(10, 26, 34, 0.05));
+            pointer-events: none;
+        }
+
+        /* ── Progress bar ───────────────────────────────────── */
+        .slider-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--sun), var(--coral));
+            z-index: 10;
+            border-radius: 0 3px 3px 0;
+            transition: width 0.08s linear;
+        }
+
+        /* ── Arrow buttons ──────────────────────────────────── */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.75);
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(16, 33, 43, 0.2);
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .slider-arrow:hover {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 6px 20px rgba(16, 33, 43, 0.3);
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        .slider-arrow:active {
+            transform: translateY(-50%) scale(0.96);
+        }
+
+        .slider-arrow svg {
+            width: 1rem;
+            height: 1rem;
+            stroke: #0f3b4e;
+            stroke-width: 2.5;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .slider-arrow.prev { left: 0.7rem; }
+        .slider-arrow.next { right: 0.7rem; }
+
+        /* ── Dot indicators ─────────────────────────────────── */
+        .slider-dots {
+            position: absolute;
+            bottom: 0.85rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.45rem;
+            z-index: 10;
+            padding: 0.4rem 0.65rem;
+            background: rgba(255, 255, 255, 0.62);
+            border-radius: 999px;
+            border: 1px solid rgba(16, 33, 43, 0.18);
+            backdrop-filter: blur(3px);
+        }
+
+        .slider-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: rgba(16, 33, 43, 0.28);
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            transition: transform 0.25s ease, background 0.25s ease, width 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: #0f3b4e;
+            width: 1.4rem;
+            border-radius: 999px;
+            transform: none;
+        }
+
+        .slider-dot:hover:not(.active) {
+            background: rgba(16, 33, 43, 0.55);
+            transform: scale(1.2);
+        }
+
+        /* ── Slide counter ──────────────────────────────────── */
+        .slide-counter {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            z-index: 10;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            background: rgba(15, 33, 43, 0.5);
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+            backdrop-filter: blur(4px);
+        }
+
+        .host-by{
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #0f3b4e;
+        }
+
+        .host-by p{
+            font-family: 'Kantumruy Pro';
+            font-weight: 600;
+        }
+
+        .card-image{
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 0.5rem auto;
+            border-radius: 999px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(16, 33, 43, 0.18);
+            
+        }
+
+        .card-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ── Animations ─────────────────────────────────────── */
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(18px) scale(0.99); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes float-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes drift {
+            from { transform: translateY(-6px) translateX(-8px); }
+            to   { transform: translateY(10px) translateX(6px); }
+        }
+
+        /* ── Responsive ─────────────────────────────────────── */
+        @media (max-width: 940px) {
+            .landing {
+                grid-template-columns: 1fr;
+            }
+            .slider {
+                aspect-ratio: 16 / 9;
+            }
+        }
+
+        @media (max-width: 540px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+            .landing {
+                border-radius: 20px;
+                padding: 1rem;
+                gap: 1.1rem;
+            }
+            h1 {
+                line-height: 0.98;
+            }
+            .slider {
+                aspect-ratio: 4 / 3;
+            }
+            .slider-arrow {
+                width: 2rem;
+                height: 2rem;
+            }
+            .slider-arrow svg {
+                width: 0.85rem;
+                height: 0.85rem;
+            }
+            .host-by{
+
+                font-size: 0.85rem;
+                text-align: center;
+
+            }
+            .card-image img{
+                
+
+                box-shadow: 0 2px 6px rgba(103, 125, 138, 0.18);
+            }
+        }
+
+        @media (max-width: 380px) {
+            .slider-arrow { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <main class="landing">
+        <section class="hero-copy">
+            <span class="kicker">Gangster បាក់ឌុប២០២៣</span>
+            <h1>រូបភាពបែកធ្លាយ</h1>
+            <p class="lead">
+                អុញនោះ!! នៅសុខៗស្រាប់តែបែកធ្លាយនូវរូបភាព មនុស្សមួយក្រុម...
+            </p>
+        </section>
+
+        <section class="slider" id="main-slider" aria-label="Featured images slider" aria-roledescription="carousel">
+            <!-- Progress bar -->
+            <div class="slider-progress" id="slider-progress" aria-hidden="true"></div>
+
+            <!-- Slide counter -->
+            <div class="slide-counter" id="slide-counter" aria-live="polite">1 / 5</div>
+
+            <!-- Arrow buttons -->
+            <button class="slider-arrow prev" id="slider-prev" aria-label="Previous slide">
+                <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="slider-arrow next" id="slider-next" aria-label="Next slide">
+                <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+
+            <!-- Slides -->
+            <div class="slides-track" id="slides-track" aria-live="off">
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 5">
+                    <img src="assets/1.jpg" alt="Team brainstorming in a bright studio" loading="eager">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 5">
+                    <img src="assets/2.jpg" alt="Laptop screen with modern code editor" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 5">
+                    <img src="assets/3.jpg" alt="Creative team collaborating around a desk" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 5">
+                    <img src="assets/4.jpg" alt="Workspace with computer and design notes" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/5.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/6.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/7.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/8.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/9.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/10.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 5">
+                    <img src="assets/11.jpg" alt="Creative team collaborating around a desk" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 5">
+                    <img src="assets/12.jpg" alt="Workspace with computer and design notes" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/13.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/14.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/15.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/16.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/17.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/18.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 5">
+                    <img src="assets/19.jpg" alt="Creative team collaborating around a desk" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 5">
+                    <img src="assets/20.jpg" alt="Workspace with computer and design notes" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/21.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/22.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/23.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/24.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/25.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/26.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 5">
+                    <img src="assets/27.jpg" alt="Creative team collaborating around a desk" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 5">
+                    <img src="assets/28.jpg" alt="Workspace with computer and design notes" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/29.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/30.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/31.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/32.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/33.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/34.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5">
+                    <img src="assets/35.jpg" alt="Team brainstorming in a bright studio" loading="lazy">
+                </article>
+            </div>
+
+            <!-- Dot navigation -->
+            <div class="slider-dots" id="slider-dots" role="tablist" aria-label="Slider navigation"></div>
+        </section>
+        
+    </main>
+    <div class="host-by">
+            <div class="card-image">
+                <img src="assets/12.jpg" alt="Hosted by លោកនាយពក" loading="lazy">
+            </div>
+            <p>Hosted by <a href="#">លោកនាយពក</a></p>
+    </div>
+
+    <script>
+    (() => {
+        'use strict';
+
+        // ── Config ──────────────────────────────────────────────
+        const AUTO_INTERVAL   = 4000;  // ms between slides
+        const PAUSE_ON_HOVER  = true;
+        const TRANSITION_MS   = 650;   // must match CSS transition duration
+
+        // ── Elements ────────────────────────────────────────────
+        const slider   = document.getElementById('main-slider');
+        const track    = document.getElementById('slides-track');
+        const dotsWrap = document.getElementById('slider-dots');
+        const prevBtn  = document.getElementById('slider-prev');
+        const nextBtn  = document.getElementById('slider-next');
+        const counter  = document.getElementById('slide-counter');
+        const progress = document.getElementById('slider-progress');
+        const slides   = Array.from(track.querySelectorAll('.slide'));
+        const total    = slides.length;
+
+        let current   = 0;
+        let timer     = null;
+        let progTimer = null;
+        let progStart = null;
+        let progElapsed = 0;
+        let paused    = false;
+        let animating = false;
+
+        // ── Build dots ──────────────────────────────────────────
+        const dots = slides.map((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+            dot.addEventListener('click', () => goTo(i));
+            dotsWrap.appendChild(dot);
+            return dot;
+        });
+
+        // ── Core navigation ─────────────────────────────────────
+        function goTo(index, skipReset = false) {
+            if (animating) return;
+            animating = true;
+            current = (index + total) % total;
+
+            track.style.transform = `translateX(-${current * 100}%)`;
+
+            // Update dots
+            dots.forEach((d, i) => {
+                d.classList.toggle('active', i === current);
+                d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+            });
+
+            // Update counter
+            counter.textContent = `${current + 1} / ${total}`;
+
+            // Reset progress bar
+            if (!skipReset) resetProgress();
+
+            setTimeout(() => { animating = false; }, TRANSITION_MS);
+        }
+
+        function next() { goTo(current + 1); }
+        function prev() { goTo(current - 1); }
+
+        // ── Progress bar ─────────────────────────────────────────
+        function startProgress(elapsed = 0) {
+            progElapsed = elapsed;
+            progStart   = performance.now() - elapsed;
+            animateProgress();
+        }
+
+        function animateProgress() {
+            progTimer = requestAnimationFrame((now) => {
+                const ratio = Math.min((now - progStart) / AUTO_INTERVAL, 1);
+                progress.style.width = (ratio * 100) + '%';
+                if (ratio < 1) {
+                    animateProgress();
+                }
+            });
+        }
+
+        function pauseProgress() {
+            if (progTimer) cancelAnimationFrame(progTimer);
+            progElapsed = performance.now() - progStart;
+        }
+
+        function resumeProgress() {
+            progStart = performance.now() - progElapsed;
+            animateProgress();
+        }
+
+        function resetProgress() {
+            if (progTimer) cancelAnimationFrame(progTimer);
+            progress.style.width = '0%';
+            startProgress(0);
+        }
+
+        // ── Auto-play ────────────────────────────────────────────
+        function startAutoPlay() {
+            stopAutoPlay();
+            timer = setInterval(next, AUTO_INTERVAL);
+            startProgress();
+        }
+
+        function stopAutoPlay() {
+            if (timer) clearInterval(timer);
+            timer = null;
+            if (progTimer) cancelAnimationFrame(progTimer);
+        }
+
+        function pauseAutoPlay() {
+            if (paused) return;
+            paused = true;
+            clearInterval(timer);
+            pauseProgress();
+        }
+
+        function resumeAutoPlay() {
+            if (!paused) return;
+            paused = false;
+            const remaining = AUTO_INTERVAL - progElapsed;
+            timer = setTimeout(() => {
+                next();
+                startAutoPlay();
+            }, remaining > 0 ? remaining : 0);
+            resumeProgress();
+        }
+
+        // ── Arrow clicks ─────────────────────────────────────────
+        nextBtn.addEventListener('click', () => { next(); resetProgress(); });
+        prevBtn.addEventListener('click', () => { prev(); resetProgress(); });
+
+        // ── Keyboard navigation ───────────────────────────────────
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft')  { prev(); resetProgress(); }
+            if (e.key === 'ArrowRight') { next(); resetProgress(); }
+        });
+
+        // ── Hover pause ───────────────────────────────────────────
+        if (PAUSE_ON_HOVER) {
+            slider.addEventListener('mouseenter', pauseAutoPlay);
+            slider.addEventListener('mouseleave', resumeAutoPlay);
+            slider.addEventListener('focusin',    pauseAutoPlay);
+            slider.addEventListener('focusout',   resumeAutoPlay);
+        }
+
+        // ── Touch / swipe support ────────────────────────────────
+        let touchStartX = null;
+        let touchStartY = null;
+
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            pauseAutoPlay();
+        }, { passive: true });
+
+        slider.addEventListener('touchend', (e) => {
+            if (touchStartX === null) return;
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            const dy = e.changedTouches[0].clientY - touchStartY;
+
+            // Only treat as swipe if horizontal movement dominates
+            if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+                dx < 0 ? next() : prev();
+                resetProgress();
+            }
+            touchStartX = null;
+            touchStartY = null;
+            resumeAutoPlay();
+        }, { passive: true });
+
+        // ── Drag support (mouse) ──────────────────────────────────
+        let dragStartX = null;
+        let isDragging = false;
+
+        slider.addEventListener('mousedown', (e) => {
+            dragStartX = e.clientX;
+            isDragging = false;
+            pauseAutoPlay();
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (dragStartX === null) return;
+            if (Math.abs(e.clientX - dragStartX) > 5) isDragging = true;
+        });
+
+        window.addEventListener('mouseup', (e) => {
+            if (dragStartX === null) return;
+            const dx = e.clientX - dragStartX;
+            if (isDragging && Math.abs(dx) > 50) {
+                dx < 0 ? next() : prev();
+                resetProgress();
+            }
+            dragStartX = null;
+            isDragging = false;
+            if (!paused) resumeAutoPlay();
+        });
+
+        // Prevent accidental link/image navigation on drag
+        slider.addEventListener('click', (e) => {
+            if (isDragging) e.preventDefault();
+        });
+
+        // ── Visibility API — pause when tab hidden ────────────────
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopAutoPlay();
+            } else {
+                startAutoPlay();
+            }
+        });
+
+        // ── Init ─────────────────────────────────────────────────
+        goTo(0, true);
+        startAutoPlay();
+    })();
+    </script>
+</body>
+</html>
